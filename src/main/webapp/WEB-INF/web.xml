@@ -1,0 +1,112 @@
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee
+                             https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd"
+         version="5.0">
+
+    <!-- Загрузка фото -->
+    <servlet>
+        <servlet-name>UploadPhotoServlet</servlet-name>
+        <servlet-class>com.sportbet.servlet.UploadPhotoServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UploadPhotoServlet</servlet-name>
+        <url-pattern>/uploadPhoto</url-pattern>
+    </servlet-mapping>
+
+    <!-- Получение фото -->
+    <servlet>
+        <servlet-name>GetPhotoServlet</servlet-name>
+        <servlet-class>com.sportbet.servlet.GetPhotoServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>GetPhotoServlet</servlet-name>
+        <url-pattern>/getPhoto</url-pattern>
+    </servlet-mapping>
+
+    <!-- Регистрация -->
+    <servlet>
+        <servlet-name>RegisterServlet</servlet-name>
+        <servlet-class>com.sportbet.servlet.RegisterServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RegisterServlet</servlet-name>
+        <url-pattern>/register</url-pattern>
+    </servlet-mapping>
+
+    <!-- Авторизация -->
+    <servlet>
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-class>com.sportbet.servlet.LoginServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LoginServlet</servlet-name>
+        <url-pattern>/login</url-pattern>
+    </servlet-mapping>
+
+    <!-- Выход из системы -->
+    <servlet>
+        <servlet-name>LogoutServlet</servlet-name>
+        <servlet-class>com.sportbet.servlet.LogoutServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LogoutServlet</servlet-name>
+        <url-pattern>/logout</url-pattern>
+    </servlet-mapping>
+
+    <!-- Пополнение баланса -->
+    <servlet>
+        <servlet-name>TopUpBalanceServlet</servlet-name>
+        <servlet-class>com.sportbet.servlet.TopUpBalanceServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>TopUpBalanceServlet</servlet-name>
+        <url-pattern>/topup</url-pattern>
+    </servlet-mapping>
+
+    <!-- Создание игры (админ) -->
+    <servlet>
+        <servlet-name>CreateGameServlet</servlet-name>
+        <servlet-class>com.sportbet.servlet.CreateGameServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CreateGameServlet</servlet-name>
+        <url-pattern>/createGame</url-pattern>
+    </servlet-mapping>
+
+    <!-- Завершение игры -->
+    <servlet>
+        <servlet-name>FinishGameServlet</servlet-name>
+        <servlet-class>com.sportbet.servlet.FinishGameServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>FinishGameServlet</servlet-name>
+        <url-pattern>/finishgame</url-pattern>
+    </servlet-mapping>
+
+    <!-- Сделать ставку -->
+    <servlet>
+        <servlet-name>MakeBetServlet</servlet-name>
+        <servlet-class>com.sportbet.servlet.MakeBetServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>MakeBetServlet</servlet-name>
+        <url-pattern>/makeBet</url-pattern>
+    </servlet-mapping>
+
+    <!-- Игровая механика -->
+    <servlet>
+        <servlet-name>PlayGameServlet</servlet-name>
+        <servlet-class>com.sportbet.servlet.PlayGameServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>PlayGameServlet</servlet-name>
+        <url-pattern>/playGame</url-pattern>
+    </servlet-mapping>
+
+    <!-- Стартовая страница -->
+    <welcome-file-list>
+        <welcome-file>jsp/index.jsp</welcome-file>
+    </welcome-file-list>
+
+</web-app>
